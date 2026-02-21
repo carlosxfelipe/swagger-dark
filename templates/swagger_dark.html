@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ api.title }}</title>
+  <link rel="icon" href="{% static 'ninja/favicon.svg' %}" type="image/svg+xml">
+  <link rel="icon" href="{% static 'ninja/favicon.png' %}" type="image/png">
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist/swagger-ui.css">
+  <link rel="stylesheet" href="/static/swagger/swagger-dark.css">
+</head>
+<body>
+  <div id="swagger-ui"></div>
+  <script src="https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js"></script>
+  <script>
+    window.onload = function() {
+      SwaggerUIBundle({
+        url: "/api/v1/openapi.json",
+        dom_id: "#swagger-ui",
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIBundle.SwaggerUIStandalonePreset
+        ],
+        layout: "BaseLayout",
+        deepLinking: true,
+        docExpansion: "list",
+        defaultModelsExpandDepth: 1
+      });
+    };
+  </script>
+</body>
+</html>
