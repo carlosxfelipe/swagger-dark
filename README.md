@@ -27,3 +27,7 @@ To use it, import the default `swagger-ui.css` and then add the custom dark them
 ![Preview 1](preview/1.png)
 ![Preview 2](preview/2.png)
 ![Preview 3](preview/3.png)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
