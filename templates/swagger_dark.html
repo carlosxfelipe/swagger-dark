@@ -6,12 +6,12 @@
   <title>{{ api.title }}</title>
   <link rel="icon" href="{% static 'ninja/favicon.svg' %}" type="image/svg+xml">
   <link rel="icon" href="{% static 'ninja/favicon.png' %}" type="image/png">
-  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist/swagger-ui.css">
+  <link rel="stylesheet" href="{% static 'ninja/swagger-ui.css' %}">
   <link rel="stylesheet" href="/static/swagger/swagger-dark.css" media="(prefers-color-scheme: dark)">
 </head>
 <body>
   <div id="swagger-ui"></div>
-  <script src="https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js"></script>
+  <script src="{% static 'ninja/swagger-ui-bundle.js' %}"></script>
   <script>
     window.onload = function() {
       SwaggerUIBundle({
