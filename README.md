@@ -15,7 +15,11 @@ To use it, import the default `swagger-ui.css` and then add the custom dark them
   rel="stylesheet"
   href="https://unpkg.com/swagger-ui-dist/swagger-ui.css"
 />
-<link rel="stylesheet" href="/static/swagger/swagger-dark.css" />
+<link
+  rel="stylesheet"
+  href="/static/swagger/swagger-dark.css"
+  media="(prefers-color-scheme: dark)"
+/>
 ```
 
 ## Preview
