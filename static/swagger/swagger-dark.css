@@ -1250,6 +1250,8 @@ html {
 
 .swagger-ui .btn:hover {
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
+  background-color: gray;
+  color: #fff;
 }
 
 .swagger-ui .btn.authorize,
@@ -1459,6 +1461,18 @@ html {
 .swagger-ui .renderedmarkdown code {
   background: rgba(0, 0, 0, 0.05);
   color: #c299e6;
+}
+
+body #swagger-ui .btn.execute {
+  background-color: #2b4566 !important;
+  border-color: #3b5a82 !important;
+  color: #e0eaff !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+body #swagger-ui .btn.execute:hover {
+  background-color: #3b5a82 !important;
+  border-color: #4c72a3 !important;
 }
 
 .swagger-ui .model-toggle:after {
@@ -1781,7 +1795,9 @@ body #swagger-ui section.models h5,
 body #swagger-ui .json-schema-2020-12__title {
   color: #b5bac9 !important;
 }
-body #swagger-ui .json-schema-2020-12-accordion__icon svg {
+body #swagger-ui .json-schema-2020-12-accordion__icon svg,
+body #swagger-ui section.models h4 svg,
+body #swagger-ui section.models h4 svg path {
   fill: #b5bac9 !important;
 }
 
