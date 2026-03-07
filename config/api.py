@@ -7,6 +7,7 @@ api = NinjaAPI(
     title="My Booking API",
     version="1.0.0",
     description="API for managing professional appointments and services.",
+    docs_url=None,  # Desabilita o Swagger padrão (docs padrão do Ninja)
 )
 
 try:
@@ -20,12 +21,12 @@ except ImportError:
     pass  # Falha silenciosa se Redoc não estiver disponível internamente dessa forma
 
 
-# Swagger UI customizado com dark mode
-@api.get("/docs-dark", include_in_schema=False)
-def swagger_dark(request):
+# Swagger UI customizado com suporte a light/dark mode
+@api.get("/docs", include_in_schema=False)
+def swagger_custom(request):
     return render(
         request,
-        "swagger_dark.html",
+        "swagger_custom.html",
         {
             "openapi_url": api.openapi_url,
             "api": api,
